@@ -10,12 +10,17 @@ const { ruleSeverityEnum } = require('../lib/doc/utils')
 /**
  * Borrowed from https://github.com/eslint/eslint/blob/master/Makefile.js
  */
+
+
 class GitHelper {
+  
   /**
    * Gets the tag name where a given file was introduced first.
    * @param {string} filePath The file path to check.
    * @returns {string} The tag name.
    */
+
+  
   static getFirstVersionOfFile(filePath) {
     const firstCommit = GitHelper.getFirstCommitOfFile(filePath)
     let tags = GitHelper.execSilent(`git tag --contains ${firstCommit}`)
